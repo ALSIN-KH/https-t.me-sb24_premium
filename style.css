@@ -1,0 +1,104 @@
+:root{
+  --tg-blue: #0088cc;
+  --tg-light-blue: #33a9e3;
+  --tg-bg: #ffffff;
+}
+
+body{
+  background: var(--tg-bg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* telegram brand */
+.bg-tg-blue{ background: var(--tg-blue); }
+.text-tg-blue{ color: var(--tg-blue); }
+
+/* labels & inputs */
+.label-text{
+  font-size: 0.875rem;
+  color: #111827;
+  display: block;
+  margin-bottom: 6px;
+}
+.tg-input{
+  border: none;
+  border-bottom: 1px solid #d1d5db;
+  padding: 8px 0;
+  background: transparent;
+  font-size: 1rem;
+}
+.tg-input:focus{ outline: none; border-bottom-color: var(--tg-blue); }
+
+/* telegram icon */
+.telegram-icon{
+  color: white;
+  background: var(--tg-blue);
+  border-radius: 999px;
+  padding: 1rem;
+  width: 96px;
+  height: 96px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* monkey */
+.monkey-emoji{ font-size: 3.5rem; }
+
+/* dropdown */
+.custom-dropdown-container{ position: relative; }
+.custom-dropdown-header{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #d1d5db;
+}
+.flag-icon{
+  width: 28px;
+  height: 18px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 2px;
+}
+
+/* list */
+.custom-dropdown-list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #e5e7eb;
+  z-index: 50;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+  border-radius: 6px;
+}
+
+/* option */
+.dropdown-option{
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+}
+.dropdown-option .left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.dropdown-option:hover{ background: #f3f4f6; }
+.dropdown-option.selected{ background: var(--tg-blue); color: white; }
+
+/* small screens */
+@media (max-width:420px){
+  .custom-dropdown-list{ max-height: 220px; }
+  .telegram-icon{ width:80px; height:80px; }
+}
